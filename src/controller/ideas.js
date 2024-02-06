@@ -8,10 +8,19 @@ const getIdeas = (req, res, next) => {
 };
 
 const addIdea = (req, res, next) => {
-  const { category, name, year, architects, description, links, feedback } =
-    req.body;
+  const {
+    category,
+    coordinates,
+    name,
+    year,
+    architects,
+    description,
+    links,
+    feedback,
+  } = req.body;
   Idea.create({
     category,
+    coordinates,
     name,
     year,
     architects,
